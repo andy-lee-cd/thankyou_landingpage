@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment Processing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 30px;
+      background-color: #f4f4f4;
+    }
+
+    h2 {
+      color: #333;
+    }
+
+    p {
+      color: #555;
+      margin: 10px 0;
+    }
+
+    .redirect-box {
+      text-align: center;
+      margin: 40px auto;
+      max-width: 900px;
+    }
+
+    .redirect-box h2 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      color: #222;
+    }
+
+    .redirect-box p {
+      font-size: 1rem;
+      color: #555;
+      margin: 5px 0;
+    }
+    
+    .button {
+      font-style: normal; /* prevents italic */
+      font-weight: bold;  /* optional, keeps button feel */
+      text-decoration: none;
+      display: inline-block;
+      padding: 12px 24px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 8px;
+      transition: background 0.2s ease;
+    }
+
+    .button:hover {
+      background-color: #1ebe5d;
+    }
+
+    .whatsapp-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 24px;
+      background-color: #25d366;
+      color: #fff;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+    }
+
+    /* App Download Section */
+    #download {
+      background: #fff;
+      padding: 40px 20px;
+      margin-top: 50px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    #download h3 {
+      margin-top: 10px;
+      font-size: 20px;
+      color: #222;
+    }
+
+    .cd-app-device-logos-ctn {
+      margin-top: 15px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .cd-app-link img {
+      height: 40px;
+    }
+
+    .cd-app-device-box {
+      margin: 30px 0;
+    }
+
+    .cd-app-device-img {
+      margin: 30px auto;
+      display: block;
+      border-radius: 12px;
+    }
+    .download-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 40px; /* space between Celcom, CM, and MyDigi */
+      flex-wrap: wrap; /* mobile responsiveness */
+    }
+
+    .download-row .cd-app-device-box {
+      flex: 1;
+      min-width: 250px;
+    }
+
+  </style>
+</head>
+<body>
+  <section id="redirect">
+    <div class="cd-wrapper redirect-box">
+      <img src="https://upload.wikimedia.org/wikipedia/en/d/d6/CelcomDigi_Logo.svg" 
+          alt="CD Logo" width="300" style="margin-bottom: 15px;">
+      
+      <h2>Almost done!</h2>
+      <p>We've received your payment request, but the final status is still being confirmed.</p>
+      <p>Please return to WhatsApp for further updates or can check your balance & usage via app.</p>
+
+      <a id="whatsapp-link" 
+        href="#" 
+        target="_blank" 
+        class="cd-app-link whatsapp-btn">
+      </a>
+    </div>
+  </section>
+
+
+  <section id="download">
+  <div class="cd-wrapper download-row">
+    <!-- Celcom Life -->
+    <div class="cd-app-device-box">
+      <img src="https://cdn.prod.website-files.com/637c596725cb8b7f82fe360b/655a219b736359512048b648_Celcom-Life-Hub_Icon_Logo.svg" width="80" alt="Celcom Life">
+      <h3>Download Celcom Life app</h3>
+      <div class="cd-app-device-logos-ctn">
+        <a href="https://apps.apple.com/us/app/celcom-life/id1355355359?ls=1" target="_blank" class="cd-app-link">
+          <img src="https://cdn.prod.website-files.com/637c596725cb8b7f82fe360b/65efe2ac1859e2a3673fd90d_app%20store%20download%20icon.svg" alt="App Store">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.celcom.mycelcom&amp;hl=en" target="_blank" class="cd-app-link">
+          <img src="https://cdn.prod.website-files.com/637c596725cb8b7f82fe360b/65efe2adc021092758e0f1c7_google%20play%20download%20icon.svg" alt="Google Play">
+        </a>
+        <a href="https://appgallery.huawei.com/app/C102624977" target="_blank" class="cd-app-link">
+          <img src="https://cdn.prod.website-files.com/637c596725cb8b7f82fe360b/65efe2acbb3e3eaecaf3e4df_huawei%20app%20download%20icon.svg" alt="Huawei AppGallery">
+        </a>
+      </div>
+    </div>
+
+    <!-- CM Image -->
+    <img src="https://cdn.prod.website-files.com/637c596725cb8b7f82fe360b/65efe32bff2b5651b14e58ee_cm.webp" 
+         loading="lazy" width="200"
+         alt="CM Banner"
+         class="cd-app-device-img">
+
+    <!-- MyDigi -->
+    <div class="cd-app-device-box">
+      <img src="https://cdn.prod.website-files.com/637c596725cb8b7f82fe360b/662613c03c8fc56b4e7971fb_MyDigi_Lockup.svg" width="80" alt="MyDigi">
+      <h3>Download MyDigi app</h3>
+      <div class="cd-app-device-logos-ctn">
+        <a href="https://itunes.apple.com/my/app/mydigi-ocs/id563496529?mt=8" target="_blank" class="cd-app-link">
+          <img src="https://cdn.prod.website-files.com/637c596725cb8b7f82fe360b/65efe2ac1859e2a3673fd90d_app%20store%20download%20icon.svg" alt="App Store">
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.digi.portal.mobdev.android&amp;hl=en" target="_blank" class="cd-app-link">
+          <img src="https://cdn.prod.website-files.com/637c596725cb8b7f82fe360b/65efe2adc021092758e0f1c7_google%20play%20download%20icon.svg" alt="Google Play">
+        </a>
+        <a href="https://appgallery.huawei.com/app/C100788049" target="_blank" class="cd-app-link">
+          <img src="https://cdn.prod.website-files.com/637c596725cb8b7f82fe360b/65efe2acbb3e3eaecaf3e4df_huawei%20app%20download%20icon.svg" alt="Huawei AppGallery">
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <script>
+    function getPhoneNumberFromReference(referenceNumber) {
+      const map = {
+        'WABA8899': '60166698899',
+        'WABA0960': '601151640960',
+        'WABA3561': '601129513561',
+        'WABA1111': '60163331111'
+      };
+
+      const prefix = referenceNumber?.substring(0, 8);
+      return map[prefix] || null;
+    }
+
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
+
+    const ref = getQueryParam("reference_number");
+    const phone = getPhoneNumberFromReference(ref);
+
+    const container = document.getElementById("whatsapp-link");
+
+    if (phone) {
+      const link = document.createElement("a");
+      link.href = `https://wa.me/${phone}?text=`;
+      link.className = "button";
+      link.textContent = "Return to WhatsApp";
+      container.appendChild(link);
+    }
+  </script>
+</body>
+</html>
